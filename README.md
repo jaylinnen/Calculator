@@ -4,7 +4,7 @@
 
 This is a beginner Python calculator that performs basic arithmetic operations using two numbers entered by the user.
 
-The user selects an operator, enters two numbers, and receives a result rounded to three decimal places. The program also detects unsupported operators and nonnumeric inputs.
+The user selects an operator, enters two numbers, and receives a result formatted with commas and rounded to two decimal places. The program also displays the result in words and detects unsupported operators and nonnumeric inputs.
 
 ## Features
 
@@ -13,9 +13,11 @@ The user selects an operator, enters two numbers, and receives a result rounded 
 * Performs multiplication
 * Performs division
 * Accepts whole numbers and decimals
+* Formats large results with commas
+* Rounds results to two decimal places
+* Converts numerical results into words
 * Rejects unsupported operators
 * Handles nonnumeric input without crashing
-* Rounds results to three decimal places
 
 ## Python Concepts Used
 
@@ -23,12 +25,14 @@ The user selects an operator, enters two numbers, and receives a result rounded 
 * User input
 * Strings
 * Floating-point numbers
+* Formatted string literals (f-strings)
 * `if`, `elif`, and `else` statements
 * Comparison operators
 * Membership operators
 * Tuples
 * `try` and `except`
 * The `round()` function
+* Importing and using a Python package
 * Basic arithmetic operators
 
 ## Supported Operations
@@ -40,31 +44,43 @@ The user selects an operator, enters two numbers, and receives a result rounded 
 |    `*`   | Multiplication |
 |    `/`   | Division       |
 
+## Required Package
+
+This calculator uses the `num2words` package to convert numerical results into words.
+
+Install the package by entering the following command in the terminal:
+
+```bash
+python3 -m pip install num2words
+```
+
 ## How to Run the Program
 
 1. Make sure Python 3 is installed.
 2. Download or clone this repository.
 3. Open the project folder in a terminal.
-4. Run the calculator:
+4. Install the required `num2words` package.
+5. Run the calculator:
 
 ```bash
-python3 calculator.py
+python3 main.py
 ```
 
-5. Select an operator and enter two numbers when prompted.
+6. Select an operator and enter two numbers when prompted.
 
 ## Example
 
 ```text
 Enter an Operator (+,-,*,/): +
-Enter 1st Number: 10
-Enter 2nd Number: 5
-15.0
+Enter 1st Number: 1000
+Enter 2nd Number: 500
+Result: 1,500.00
+In words: one thousand, five hundred
 ```
 
 ## Input Validation
 
-The program checks whether the user selected one of the four supported operators. It also uses error handling to prevent nonnumeric entries from crashing the program.
+The program checks whether the user selected one of the four supported operators. It also uses exception handling to prevent nonnumeric entries from crashing the program.
 
 ## Future Improvements
 
